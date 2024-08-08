@@ -374,19 +374,21 @@ const BestProducts = () => {
         </h1>
         <p className="text-sm text-[#455A64] ">There are numbers of reasons</p>
       </div>
-      <div className="w-full overflow-hidden">
+      <div className="w-full">
         <Tabs
           defaultValue="blockchain"
-          className="w-full flex flex-col gap-5 justify-center items-center"
+          className="w-full flex flex-col gap-5  lg:justify-center items-center overflow-x-scroll"
         >
-          <TabsList className="w-fit h-full">
-            <TabsTrigger value="blockchain">Blockchain</TabsTrigger>
-            <TabsTrigger value="website">Website</TabsTrigger>
-            <TabsTrigger value="android">Android App</TabsTrigger>
-            <TabsTrigger value="web">Web 3</TabsTrigger>
-            <TabsTrigger value="ios">IOS Application</TabsTrigger>
-            <TabsTrigger value="bussiness">Bussiness Platform</TabsTrigger>
-          </TabsList>
+          <div className="w-full overflow-x-scroll">
+            <TabsList className="w-fit h-full">
+              <TabsTrigger value="blockchain">Blockchain</TabsTrigger>
+              <TabsTrigger value="website">Website</TabsTrigger>
+              <TabsTrigger value="android">Android App</TabsTrigger>
+              <TabsTrigger value="web">Web 3</TabsTrigger>
+              <TabsTrigger value="ios">IOS Application</TabsTrigger>
+              <TabsTrigger value="bussiness">Bussiness Platform</TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value="blockchain" className="">
             <div className="w-full grid lg:grid-cols-5 grid-cols-1 gap-5">
