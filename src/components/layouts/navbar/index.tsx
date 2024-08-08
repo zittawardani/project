@@ -14,6 +14,7 @@ import {
 
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import ShoppingCartIcon from "@/components/ui/icons/shoppingCart";
 
 const Navbar = () => {
   const [view, setView] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
         <Link href={"/"}>E-Shop DBIX</Link>
       </h1>
 
-      <div className="flex-1 flex justify-center">
+      <div className="flex-1 flex justify-center ">
         <div
           className={`lg:hidden flex lg:flex-row flex-col lg:items-center gap-5 absolute lg:static top-16 lg:h-full ${
             view ? "h-screen opacity-100" : "h-0 opacity-0"
@@ -80,6 +81,16 @@ const Navbar = () => {
           <Link href={"/contact"} className="font-medium hover:opacity-80">
             Contact
           </Link>
+          <div className="md:hidden flex items-center gap-3">
+            <Link href={"/user/login"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Login
+              </Button>
+            </Link>
+            <Link href={"/user/login"}>
+              <Button size={"sm"}>Signup</Button>
+            </Link>
+          </div>
         </div>
 
         <div className="lg:flex hidden lg:flex-row items-center gap-10">
@@ -111,9 +122,12 @@ const Navbar = () => {
           <Link href={"/contact"} className="font-semibold hover:opacity-80">
             Contact
           </Link>
+          <Link href={"/shopping"} className="font-semibold hover:opacity-80">
+            <ShoppingCartIcon />
+          </Link>
         </div>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="lg:flex items-center gap-3 hidden">
         <Link href={"/user/login"}>
           <Button size={"sm"} variant={"secondary"}>
             Login

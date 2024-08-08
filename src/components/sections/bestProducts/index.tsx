@@ -369,19 +369,17 @@ const BestProducts = () => {
   return (
     <div className="w-full flex flex-col gap-16 lg:mt-5" id="products">
       <div className="flex flex-col gap-3 items-center">
-        <h1 className="text-5xl capitalize text-center font-semibold">
+        <h1 className="text-2xl lg:text-5xl capitalize text-center font-semibold">
           Products
         </h1>
-        <p className="text-[#455A64] ">
-          There are numbers of reasons 
-        </p>
+        <p className="text-sm text-[#455A64] ">There are numbers of reasons</p>
       </div>
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <Tabs
           defaultValue="blockchain"
           className="w-full flex flex-col gap-5 justify-center items-center"
         >
-          <TabsList className="grid w-fit lg:grid-cols-6 grid-cols-2 lg:gap-0 gap-1 h-full">
+          <TabsList className="w-fit h-full">
             <TabsTrigger value="blockchain">Blockchain</TabsTrigger>
             <TabsTrigger value="website">Website</TabsTrigger>
             <TabsTrigger value="android">Android App</TabsTrigger>
