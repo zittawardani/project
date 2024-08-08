@@ -2,19 +2,18 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronDownIcon,
   CrossCircledIcon,
-  HamburgerMenuIcon,
 } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import ShoppingCartIcon from "@/components/ui/icons/shoppingCart";
+import ButtoNavIcon from "@/components/ui/icons/buttonnav";
+import ShoppingCartIcon from "@/components/ui/icons/shoppingcart";
 
 const Navbar = () => {
   const [view, setView] = useState(false);
@@ -34,21 +33,21 @@ const Navbar = () => {
   }, [view]);
 
   return (
-    <div className="w-full flex justify-between items-center py-5 relative">
-      <h1 className="font-bold text-lg flex items-center gap-5">
+    <div className="w-full flex flex-col py-5 relative px-6">
+      <div className="font-bold text-lg flex items-center justify-between w-full gap-5">
+        <Link href={"/"}>E-Shop DBIX</Link>
         <button onClick={() => setView(!view)} className="lg:hidden block">
           {view ? (
             <CrossCircledIcon width={20} height={20} />
           ) : (
-            <HamburgerMenuIcon width={20} height={20} />
+            <ButtoNavIcon />
           )}
         </button>
-        <Link href={"/"}>E-Shop DBIX</Link>
-      </h1>
+      </div>
 
-      <div className="flex-1 flex justify-center ">
+      <div className="flex justify-center">
         <div
-          className={`lg:hidden flex lg:flex-row flex-col lg:items-center gap-5 absolute lg:static top-16 lg:h-full ${
+          className={`lg:hidden flex lg:flex-row flex-col lg:items-center px-6 gap-5 absolute lg:static top-16 lg:h-full ${
             view ? "h-screen opacity-100" : "h-0 opacity-0"
           } transition-all duration-300 bg-white lg:w-fit w-full pt-3`}
           ref={ref}
