@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  ChevronDownIcon,
-  CrossCircledIcon,
-} from "@radix-ui/react-icons";
+import { ChevronDownIcon, CrossCircledIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,19 +30,27 @@ const Navbar = () => {
   }, [view]);
 
   return (
-    <div className="w-full flex flex-col py-5 relative px-6">
-      <div className="font-bold text-lg flex items-center justify-between w-full gap-5">
+    <div className="w-full flex flex-col lg:flex-row py-5 relative px-6 lg:justify-between">
+      <div className="font-bold text-lg flex items-center justify-between w-full gap-5 lg:w-fit">
         <Link href={"/"}>E-Shop DBIX</Link>
-        <button onClick={() => setView(!view)} className="lg:hidden block">
-          {view ? (
-            <CrossCircledIcon width={20} height={20} />
-          ) : (
-            <ButtoNavIcon />
-          )}
-        </button>
+        <div className="flex gap-4 lg:hidden">
+          <Link
+            href={"/shopping"}
+            className="lg:hidden font-semibold hover:opacity-80"
+          >
+            <ShoppingCartIcon />
+          </Link>
+          <button onClick={() => setView(!view)} className="lg:hidden block">
+            {view ? (
+              <CrossCircledIcon width={20} height={20} />
+            ) : (
+              <ButtoNavIcon />
+            )}
+          </button>
+        </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center lg:w-fit">
         <div
           className={`lg:hidden flex lg:flex-row flex-col lg:items-center px-6 gap-5 absolute lg:static top-16 lg:h-full ${
             view ? "h-screen opacity-100" : "h-0 opacity-0"
@@ -80,7 +85,7 @@ const Navbar = () => {
           <Link href={"/contact"} className="font-medium hover:opacity-80">
             Contact
           </Link>
-          <div className="md:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-3">
             <Link href={"/user/login"}>
               <Button size={"sm"} variant={"secondary"}>
                 Login
@@ -92,7 +97,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="lg:flex hidden lg:flex-row items-center gap-10">
+        <div className="lg:flex hidden lg:flex-row items-center lg:justify-between gap-10">
           <Link href={"/"} className="hover:opacity-80 font-semibold">
             Home
           </Link>
