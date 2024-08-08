@@ -74,7 +74,6 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-
           <Link href={"/#service"} className="font-medium hover:opacity-80">
             Services
           </Link>
@@ -84,32 +83,32 @@ const Navbar = () => {
         </div>
 
         <div className="lg:flex hidden lg:flex-row items-center gap-10">
-          <Link href={"/"} className="font-medium hover:opacity-80">
+          <Link href={"/"} className="hover:opacity-80 font-semibold">
             Home
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 font-semibold">
                 Company
                 <ChevronDownIcon />
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="font-semibold">
                 <Link href={"/aboutus"}>About Us</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="font-semibold">
                 <Link href={"/team"}>Our Team</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="font-semibold">
                 <Link href={"/#faqs"}>Faq's</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link href={"/#services"} className="font-medium hover:opacity-80">
+          <Link href={"/#services"} className="font-semibold hover:opacity-80">
             Service
           </Link>
-          <Link href={"/contact"} className="font-medium hover:opacity-80">
+          <Link href={"/contact"} className="font-semibold hover:opacity-80">
             Contact
           </Link>
         </div>
