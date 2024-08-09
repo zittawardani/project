@@ -379,7 +379,7 @@ const BestProducts = () => {
           defaultValue="blockchain"
           className="w-full flex flex-col gap-5  lg:justify-center items-center overflow-x-scroll"
         >
-          <div className="w-full overflow-x-scroll">
+          <div className="w-full overflow-x-scroll md:w-fit">
             <TabsList className="w-fit h-full">
               <TabsTrigger value="blockchain">Blockchain</TabsTrigger>
               <TabsTrigger value="website">Website</TabsTrigger>
