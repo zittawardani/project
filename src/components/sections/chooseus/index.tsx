@@ -6,11 +6,11 @@ import React from "react";
 import bussinessAnimation from '../../../../public/animations/business-sales-profit.json'
 const ChooseUs = () => {
   return (
-    <div className="flex flex-col items-center lg:p-8 lg:flex-row gap-10">
-      <div className="w-full lg:w-1/2 md:w-2/3 flex justify-center mb-8 md:mb-0">
-        <Lottie animationData={bussinessAnimation} />
+    <div className="flex flex-col md:flex-row items-center md:items-start lg:p-8">
+      <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+        <img src="/bghero.png" alt="" className="lg:w-5/6 w-full h-full" />
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full md:w-1/2">
         <h1 className="text-4xl font-semibold mb-4 lg:text-5xl">
           Why Choose Us
         </h1>

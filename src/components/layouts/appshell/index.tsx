@@ -18,9 +18,9 @@ const Appshell = ({ children }: props) => {
       {path.includes(pathname) ? (
         <div className="w-full">{children}</div>
       ) : (
-        <div className="w-full flex flex-col gap-16">
-          <div className="w-full border-b shadow-lg sticky top-0 left-0 bg-white z-50">
-            <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-auto w-full xl:px-0 lg:px-0">
+        <div className='w-full flex flex-col gap-16'>
+          <div className='w-full border-b shadow-lg sticky top-0 left-0 bg-white z-50'>
+            <div className='xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-auto w-full xl:px-0 lg:px-0'>
               <Navbar />
             </div>
           </div>
