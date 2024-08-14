@@ -87,7 +87,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className='text-sm lg:text-base pb-5 text-center w-full border-t pt-10 border-text/20'>
+      <div className="text-sm lg:text-base pb-5 text-center w-full border-t pt-10 border-text/20">
         Copyright © 2024 by PT. Digital Blockchain Indonesia
       </div>
     </footer>

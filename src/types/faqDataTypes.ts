@@ -1,5 +1,5 @@
 export interface FAQDataType {
-  indexValue: number;
-  title: string;
-  deskripsi: string;
-}
+    indexValue: number;
+    title: string;
+    deskripsi: string;
+  }
